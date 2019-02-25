@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .container {
+      display: flex;
+    }
+    .repo-container {
+      width: 50%;
+      border: 1px solid;
+      text-align: center;
+    }
+
+    input {
+      margin-top: 20px;
+      width: 80%;
+      border-radius: 20px;
+      border: 1px solid #c6c6c6;
+      padding: 10px 30px;
+    }
+
+    *:focus {
+      outline: none;
+    }
+
+    .button,
+    .repo-user-button {
+      padding: 10px 0;
+      width: 20%;
+      background-color: #c6c6c6;
+      border: 1px solid black;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+
+    .texts-data-user {
+      text-align: left;
+    }
+
+    .img-perfil {
+      width: 100px;
+      height: 100px;
+    }
+
+    .title {
+      font-size: 18px;
+      padding: 5px 10px;
+      margin: 0;
+    }
+    
+    .description {
+      font-size: 14px;
+      padding: 5px 10px;
+      margin: 0;
+    }
+    
+    .link {
+      display: block;
+      padding: 5px 10px;
+      color: black;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    .repo-remove {
+      color: red;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+    .repo-list {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    #loading {
+      display: block;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="repo-container">
+      <form id='repo-form'>
+        <h1>Procurar por um Repositório</h1>
+        <input type="text" class='input-search'>
+        <button type="submit" class='button'>Pesquisar Repositório</button>
+      </form>
+
+      <ul class="repo-ul"></ul>
+    </div>
+
+    <div class="repo-container">
+      <form id='repo-user-form'>
+        <h1>Procurar por repositórios de um Usuário</h1>
+        <input type="text" class='repo-user-input'>
+        <button type="submit" class='repo-user-button'>Pesquisar Repositório</button>
+      </form>
+
+      <ul class="repo-user-ul"></ul>
+    </div>
+  </div>
+  
+  <script src='./bundle.js'></script>
+</body>
+</html>
